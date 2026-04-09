@@ -1,0 +1,61 @@
+PADRÃO DE COMMITS - PROJETO GARAGE SYSTEM
+
+Este projeto utiliza um padrão baseado em Conventional Commits para manter organização, clareza e profissionalismo no histórico do Git.
+
+ESTRUTURA DO COMMIT:
+tipo(escopo): descrição curta
+
+Exemplo:
+feat(frontend): create home page
+
+TIPOS DE COMMITS:
+
+feat     -> nova funcionalidade
+fix      -> correção de bug
+refactor -> melhoria interna sem mudar comportamento
+style    -> alterações visuais (CSS)
+chore    -> configurações, setup, dependências
+docs     -> documentação
+remove   -> remoção de código
+perf     -> melhoria de performance (opcional)
+
+ESCOPOS UTILIZADOS:
+
+frontend
+backend
+api
+auth
+admin
+vehicle
+
+EXEMPLOS PRÁTICOS:
+
+chore: initial project structure
+chore(frontend): setup react app
+chore(backend): setup express server
+
+feat(vehicle): create vehicle model
+feat(api): add vehicle routes
+feat(frontend): display vehicle list
+
+fix(api): correct error handling
+
+style(frontend): improve layout
+
+BOAS PRÁTICAS:
+
+- Escrever commits curtos e claros
+- Usar inglês
+- Fazer commits pequenos e frequentes
+- Sempre descrever exatamente o que foi feito
+
+EVITAR:
+
+- commits genéricos como:
+  "update"
+  "test"
+  "coisas"
+
+OBJETIVO:
+
+Manter um histórico limpo, profissional e fácil de entender, tanto para estudo quanto para portfólio e mercado de trabalho.
