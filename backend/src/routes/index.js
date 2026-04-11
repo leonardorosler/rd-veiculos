@@ -1,15 +1,10 @@
 const { Router } = require('express')
 const authRoutes = require('./auth.routes')
+const vehicleRoutes = require('./vehicle.routes')
 
 const router = Router()
 
 router.use('/auth', authRoutes)
+router.use('/veiculos', vehicleRoutes)
 
 module.exports = router
-
-const { autenticar } = require('../middlewares/auth.middleware')
-
-// Rota temporária de teste — apague depois
-router.get('/admin/teste', autenticar, (req, res) => {
-  res.json({ mensagem: 'Acesso autorizado', adminId: req.adminId })
-})
