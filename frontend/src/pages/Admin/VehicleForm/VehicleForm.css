@@ -1,0 +1,185 @@
+.vform { min-height: 100vh; padding: 40px 0 80px; }
+
+.vform__topo { margin-bottom: 32px; }
+
+.vform__voltar {
+  font-size: 13px;
+  color: var(--texto-sec);
+  display: inline-block;
+  margin-bottom: 12px;
+  transition: color var(--ease);
+}
+
+.vform__voltar:hover { color: var(--gold); }
+
+.vform__titulo { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; }
+
+.vform__erro {
+  background: rgba(192,57,43,0.1);
+  border: 1px solid rgba(192,57,43,0.3);
+  border-radius: var(--r-md);
+  padding: 14px 18px;
+  color: #e74c3c;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.vform__form { display: flex; flex-direction: column; gap: 32px; }
+
+.vform__secao {
+  background: var(--fundo-card);
+  border: 1px solid var(--borda);
+  border-radius: var(--r-lg);
+  padding: 28px;
+}
+
+.vform__secao-titulo {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--texto-sec);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--borda);
+}
+
+.vform__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.vform__campo { display: flex; flex-direction: column; gap: 8px; }
+.vform__campo--full { grid-column: 1 / -1; }
+
+.vform__label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--texto-sec);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.vform__input {
+  background: var(--fundo-elevado);
+  border: 1px solid var(--borda);
+  border-radius: var(--r-sm);
+  color: var(--texto);
+  padding: 11px 14px;
+  font-size: 14px;
+  transition: border-color var(--ease);
+  width: 100%;
+}
+
+.vform__input:focus { outline: none; border-color: var(--gold); }
+.vform__input::placeholder { color: var(--texto-ter); }
+.vform__input option { background: var(--fundo-elevado); }
+.vform__textarea { resize: vertical; min-height: 100px; }
+
+.vform__imgs-existentes, .vform__previews {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.vform__img-item, .vform__preview {
+  position: relative;
+  width: 100px;
+  height: 72px;
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  border: 1px solid var(--borda);
+}
+
+.vform__img-item img, .vform__preview img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+.vform__img-badge {
+  position: absolute;
+  bottom: 4px; left: 4px;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 6px;
+  background: var(--gold);
+  color: #080808;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.vform__img-remover {
+  position: absolute;
+  top: 4px; right: 4px;
+  width: 20px; height: 20px;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--ease);
+}
+
+.vform__img-remover:hover { background: var(--vermelho); }
+
+.vform__upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 32px;
+  border: 1.5px dashed var(--borda-hover);
+  border-radius: var(--r-md);
+  cursor: pointer;
+  transition: all var(--ease);
+  text-align: center;
+}
+
+.vform__upload:hover { border-color: var(--gold); background: var(--gold-suave); }
+
+.vform__upload input { display: none; }
+
+.vform__upload-icone {
+  font-size: 28px;
+  color: var(--texto-ter);
+  line-height: 1;
+}
+
+.vform__upload span { font-size: 14px; color: var(--texto-sec); }
+
+.vform__upload-sub { font-size: 12px; color: var(--texto-ter); }
+
+.vform__acoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.vform__btn-cancelar {
+  padding: 12px 24px;
+  border: 1px solid var(--borda);
+  border-radius: var(--r-sm);
+  color: var(--texto-sec);
+  font-size: 14px;
+  transition: all var(--ease);
+}
+
+.vform__btn-cancelar:hover { border-color: var(--borda-hover); color: var(--texto); }
+
+.vform__btn-salvar {
+  padding: 12px 32px;
+  background: var(--gold);
+  color: #080808;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: var(--r-sm);
+  transition: all var(--ease);
+}
+
+.vform__btn-salvar:hover:not(:disabled) { background: var(--gold-claro); }
+.vform__btn-salvar:disabled { opacity: 0.6; cursor: not-allowed; }

@@ -1,0 +1,111 @@
+.login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--fundo);
+}
+
+.login__card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--fundo-card);
+  border: 1px solid var(--borda);
+  border-radius: var(--r-xl);
+  padding: 40px;
+  animation: fadeUp 0.5s var(--ease) both;
+}
+
+.login__topo {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login__logo {
+  font-size: 36px;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 16px;
+}
+
+.login__titulo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-bottom: 6px;
+}
+
+.login__sub {
+  font-size: 13px;
+  color: var(--texto-sec);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.login__erro {
+  background: rgba(192,57,43,0.1);
+  border: 1px solid rgba(192,57,43,0.3);
+  border-radius: var(--r-sm);
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #e74c3c;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login__campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login__label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--texto-sec);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.login__input {
+  background: var(--fundo-elevado);
+  border: 1px solid var(--borda);
+  border-radius: var(--r-sm);
+  color: var(--texto);
+  padding: 12px 16px;
+  font-size: 15px;
+  transition: border-color var(--ease);
+  width: 100%;
+}
+
+.login__input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.login__input::placeholder { color: var(--texto-ter); }
+
+.login__btn {
+  padding: 14px;
+  background: var(--gold);
+  color: #080808;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: var(--r-sm);
+  transition: all var(--ease);
+  letter-spacing: 0.2px;
+}
+
+.login__btn:hover:not(:disabled) {
+  background: var(--gold-claro);
+  transform: translateY(-1px);
+}
+
+.login__btn:disabled { opacity: 0.6; cursor: not-allowed; }
