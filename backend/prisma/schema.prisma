@@ -15,21 +15,21 @@ model Veiculo {
   preco         Float
   quilometragem Int
   combustivel   String
-  tipo          String   // carro | moto | caminhao
+  tipo          String
   cor           String
   descricao     String?
   vendido       Boolean  @default(false)
   imagens       Imagem[]
-  criadoEm      DateTime @default(now())
-  atualizadoEm  DateTime @updatedAt
+  criadoEm     DateTime @default(now())
+  atualizadoEm DateTime @updatedAt
 }
 
 model Imagem {
-  id          String  @id @default(cuid())
-  url         String
-  ehPrimaria  Boolean @default(false)
-  veiculoId   String
-  veiculo     Veiculo @relation(fields: [veiculoId], references: [id], onDelete: Cascade)
+  id         String  @id @default(cuid())
+  url        String
+  ehPrimaria Boolean @default(false)
+  veiculoId  String
+  veiculo    Veiculo @relation(fields: [veiculoId], references: [id], onDelete: Cascade)
 }
 
 model Admin {
