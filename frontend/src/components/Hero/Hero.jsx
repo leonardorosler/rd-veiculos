@@ -1,65 +1,65 @@
 import './Hero.css'
 
 export default function Hero({ total }) {
-    function scrollParaEstoque() {
-        document.getElementById('estoque')?.scrollIntoView({ behavior: 'smooth' })
-    }
+  function rolar() {
+    document.getElementById('catalogo')?.scrollIntoView({ behavior: 'smooth' })
+  }
 
-    return (
-        <section className="hero">
-            <div className="hero__fundo">
-                <div className="hero__grade" />
-                <div className="hero__brilho" />
-            </div>
+  return (
+    <section className="hero">
+      <div className="hero__fundo">
+        <div className="hero__linhas" />
+        <div className="hero__glow-esq" />
+        <div className="hero__glow-dir" />
+      </div>
 
-            <div className="container hero__conteudo">
-                <div className="hero__badge">Estoque selecionado</div>
-                <h1 className="hero__titulo">
-                    Encontre seu<br />
-                    <span className="hero__titulo-destaque">próximo veículo</span>
-                </h1>
-                <p className="hero__subtitulo">
-                    {total > 0
-                        ? `${total} veículo${total !== 1 ? 's' : ''} disponíve${total !== 1 ? 'is' : 'l'} com procedência garantida`
-                        : 'Veículos selecionados com procedência garantida'
-                    }
-                </p>
+      <div className="container hero__conteudo">
+        <div className="hero__badge">
+          <span className="hero__badge-dot" />
+          Morro Redondo — RS
+        </div>
 
-                <div className="hero__acoes">
-                    <button className="hero__btn-primario" onClick={scrollParaEstoque}>
-                        Ver estoque completo
-                    </button>
-                    <a
-                        href="https://wa.me/5551999999999"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hero__btn-secundario"
-                    >
-                        Falar com consultor
-                    </a>
-                </div>
+        <h1 className="hero__titulo">
+          Os melhores<br />
+          <span className="hero__titulo-red">seminovos</span><br />
+          da região
+        </h1>
 
-                <div className="hero__stats">
-                    <div className="hero__stat">
-                        <span className="hero__stat-num">{total || '—'}</span>
-                        <span className="hero__stat-label">Em estoque</span>
-                    </div>
-                    <div className="hero__divisor" />
-                    <div className="hero__stat">
-                        <span className="hero__stat-num">100%</span>
-                        <span className="hero__stat-label">Procedência</span>
-                    </div>
-                    <div className="hero__divisor" />
-                    <div className="hero__stat">
-                        <span className="hero__stat-num">★ 5.0</span>
-                        <span className="hero__stat-label">Avaliação</span>
-                    </div>
-                </div>
-            </div>
+        <p className="hero__sub">
+          Veículos inspecionados, financiamento facilitado e atendimento que você não esquece.
+        </p>
 
-            <div className="hero__scroll" onClick={scrollParaEstoque}>
-                <div className="hero__scroll-seta" />
-            </div>
-        </section>
-    )
+        <div className="hero__acoes">
+          <button className="hero__btn-pri" onClick={rolar}>
+            Ver catálogo
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <a href="https://wa.me/5553999999999" target="_blank" rel="noopener noreferrer" className="hero__btn-sec">
+            Falar com consultor
+          </a>
+        </div>
+
+        <div className="hero__nums">
+          <div className="hero__num">
+            <span className="hero__num-val">{total || '0'}</span>
+            <span className="hero__num-txt">Em estoque</span>
+          </div>
+          <div className="hero__num-div" />
+          <div className="hero__num">
+            <span className="hero__num-val">100%</span>
+            <span className="hero__num-txt">Inspecionados</span>
+          </div>
+          <div className="hero__num-div" />
+          <div className="hero__num">
+            <span className="hero__num-val">+10</span>
+            <span className="hero__num-txt">Anos de mercado</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="hero__scroll-hint" onClick={rolar}>
+        <div className="hero__scroll-seta" />
+      </div>
+    </section>
+  )
 }

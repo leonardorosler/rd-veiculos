@@ -1,0 +1,116 @@
+.footer{
+  position:relative;
+  border-top:1px solid var(--borda);
+  padding:60px 0 0;
+  overflow:hidden;
+}
+
+.footer__glow{
+  position:absolute;
+  top:0;left:50%;transform:translateX(-50%);
+  width:600px;height:2px;
+  background:linear-gradient(90deg,transparent,var(--red),transparent);
+  opacity:0.5;
+}
+
+.footer__corpo{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:48px;
+  padding-bottom:48px;
+  border-bottom:1px solid var(--borda);
+}
+
+@media(max-width:900px){
+  .footer__corpo{grid-template-columns:1fr 1fr;gap:32px}
+}
+
+@media(max-width:540px){
+  .footer__corpo{grid-template-columns:1fr}
+}
+
+.footer__logo{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+
+.footer__logo-emblem{
+  width:40px;height:40px;
+  background:var(--red);
+  border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--fonte-display);
+  font-size:16px;font-weight:800;color:#fff;
+  box-shadow:0 0 16px var(--red-glow);
+  flex-shrink:0;
+}
+
+.footer__logo-nome{
+  display:block;
+  font-family:var(--fonte-display);
+  font-size:17px;font-weight:700;
+  color:var(--texto);letter-spacing:0.5px;
+  line-height:1.1;
+}
+
+.footer__logo-sub{
+  display:block;
+  font-size:10px;color:var(--texto-ter);
+  text-transform:uppercase;letter-spacing:0.12em;
+}
+
+.footer__desc{
+  font-size:13px;color:var(--texto-sec);
+  line-height:1.75;margin-bottom:20px;
+  max-width:320px;
+}
+
+.footer__wpp{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:9px 18px;
+  background:var(--red-suave);
+  border:1px solid var(--borda-red);
+  border-radius:var(--r-sm);
+  color:var(--red-claro);
+  font-size:13px;font-weight:600;
+  transition:all var(--ease);
+}
+
+.footer__wpp:hover{background:var(--red-medio)}
+
+.footer__col-titulo{
+  font-size:11px;font-weight:700;
+  color:var(--red);
+  text-transform:uppercase;letter-spacing:0.12em;
+  margin-bottom:16px;
+}
+
+.footer__nav{display:flex;flex-direction:column;gap:10px}
+
+.footer__link{
+  font-size:14px;color:var(--texto-sec);
+  transition:color var(--ease);
+}
+
+.footer__link:hover{color:var(--red)}
+
+.footer__horarios{display:flex;flex-direction:column;gap:8px}
+
+.footer__horario{
+  display:flex;justify-content:space-between;
+  font-size:13px;color:var(--texto-sec);
+  gap:16px;
+}
+
+.footer__horario--fechado span{color:var(--texto-ter)}
+
+.footer__endereco{
+  font-size:13px;color:var(--texto-sec);
+  line-height:1.8;
+}
+
+.footer__base{
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:12px;
+  padding:20px 0;
+}
+
+.footer__copy{font-size:12px;color:var(--texto-ter)}
+.footer__dev{font-size:12px;color:var(--texto-ter)}

@@ -46,7 +46,15 @@ export default function Dashboard() {
       <header className="dash__header">
         <div className="container dash__header-inner">
           <div>
-            <span className="dash__logo">◈ AutoRevenda</span>
+            <div style={{
+              width: '36px', height: '36px',
+              background: 'var(--red)',
+              borderRadius: '6px',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              boxShadow: '0 0 12px var(--red-glow)'
+            }}>
+              <img src="/src/assets/logo.png" alt="RD" style={{ width: '32px', height: '32px', objectFit: 'contain', borderRadius: '4px' }} />
+            </div>
             <span className="dash__admin-tag">Painel Admin</span>
           </div>
           <div className="dash__header-acoes">

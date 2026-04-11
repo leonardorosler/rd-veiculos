@@ -19,7 +19,7 @@
 .dash__logo {
   font-size: 16px;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--red);
   margin-right: 12px;
 }
 
@@ -102,7 +102,7 @@
 
 .dash__btn-novo {
   padding: 10px 20px;
-  background: var(--gold);
+  background: var(--red);
   color: #080808;
   font-size: 14px;
   font-weight: 700;
@@ -110,7 +110,7 @@
   transition: all var(--ease);
 }
 
-.dash__btn-novo:hover { background: var(--gold-claro); }
+.dash__btn-novo:hover { background: var(--red-claro); }
 
 .dash__loading { display: flex; justify-content: center; padding: 60px 0; }
 
@@ -197,7 +197,7 @@
   white-space: nowrap;
 }
 
-.dash__acao--editar:hover { border-color: var(--gold); color: var(--gold); }
+.dash__acao--editar:hover { border-color: var(--red); color: var(--red); }
 .dash__acao--vendido:hover { border-color: #2ecc71; color: #2ecc71; }
 .dash__acao--deletar:hover { border-color: var(--vermelho); color: var(--vermelho); }
 

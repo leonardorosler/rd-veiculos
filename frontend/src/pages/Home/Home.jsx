@@ -3,7 +3,9 @@ import { useVehicles } from '../../hooks/useVehicles'
 import Hero from '../../components/Hero/Hero'
 import VehicleCard from '../../components/VehicleCard/VehicleCard'
 import Filter from '../../components/Filter/Filter'
+import SobrePreview from '../../components/SobrePreview/SobrePreview'
 import './Home.css'
+import Sobre from '../Sobre/Sobre'
 
 export default function Home() {
   const [filtros, setFiltros] = useState({})
@@ -14,37 +16,45 @@ export default function Home() {
     <>
       <Hero total={veiculos.length} />
 
-      <section id="estoque" className="estoque">
+      <section id="catalogo" className="catalogo">
         <div className="container">
-          <div className="estoque__header">
-            <div>
-              <h2 className="estoque__titulo">Estoque completo</h2>
-              <p className="estoque__sub">
-                {carregando ? 'Carregando...' : `${veiculos.length} veículo${veiculos.length !== 1 ? 's' : ''} disponíve${veiculos.length !== 1 ? 'is' : 'l'}`}
-              </p>
+          <div className="catalogo__header">
+            <div className="catalogo__header-esq">
+              <div className="catalogo__linha-red" />
+              <div>
+                <h2 className="catalogo__titulo">Catálogo</h2>
+                <p className="catalogo__sub">
+                  {carregando
+                    ? 'Carregando veículos...'
+                    : `${veiculos.length} veículo${veiculos.length !== 1 ? 's' : ''} encontrado${veiculos.length !== 1 ? 's' : ''}`
+                  }
+                </p>
+              </div>
             </div>
           </div>
 
           <Filter onFiltrar={setFiltros} />
 
-          {erro && <div className="estoque__erro">{erro}</div>}
+          {erro && <div className="catalogo__erro">{erro}</div>}
 
           {carregando ? (
-            <div className="estoque__loading">
-              <div className="spinner" />
-            </div>
+            <div className="catalogo__loading"><div className="spinner" /></div>
           ) : veiculos.length === 0 ? (
-            <div className="estoque__vazio">
-              <span className="estoque__vazio-icone">◈</span>
-              <p>{temFiltros ? 'Nenhum veículo encontrado com esses filtros.' : 'Nenhum veículo no estoque no momento.'}</p>
+            <div className="catalogo__vazio">
+              <div className="catalogo__vazio-icone">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+                  <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+              </div>
+              <p>{temFiltros ? 'Nenhum veículo encontrado com esses filtros.' : 'Estoque vazio no momento.'}</p>
               {temFiltros && (
-                <button className="estoque__limpar" onClick={() => setFiltros({})}>
+                <button className="catalogo__limpar" onClick={() => setFiltros({})}>
                   Limpar filtros
                 </button>
               )}
             </div>
           ) : (
-            <div className="estoque__grid">
+            <div className="catalogo__grid">
               {veiculos.map((v, i) => (
                 <div key={v.id} style={{ animationDelay: `${i * 0.05}s` }}>
                   <VehicleCard veiculo={v} />
@@ -54,13 +64,8 @@ export default function Home() {
           )}
         </div>
       </section>
-
-      <footer className="rodape">
-        <div className="container rodape__inner">
-          <span className="rodape__logo">◈ AutoRevenda</span>
-          <span className="rodape__copy">© {new Date().getFullYear()} · Todos os direitos reservados</span>
-        </div>
-      </footer>
+      {/* <SobrePreview /> */}
+      <Sobre />
     </>
   )
 }
