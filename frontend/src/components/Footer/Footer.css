@@ -114,3 +114,11 @@
 
 .footer__copy{font-size:12px;color:var(--texto-ter)}
 .footer__dev{font-size:12px;color:var(--texto-ter)}
+
+@media (max-width: 540px) {
+  .footer { padding: 40px 0 0; }
+  .footer__corpo { grid-template-columns: 1fr; gap: 28px; }
+  .footer__desc { max-width: 100%; }
+  .footer__base { flex-direction: column; gap: 6px; text-align: center; }
+  .footer__horario { font-size: 12px; }
+}

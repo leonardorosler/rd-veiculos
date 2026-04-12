@@ -112,3 +112,8 @@
 }
 
 .vcard:hover .vcard__ver{color:var(--red);transform:translateX(3px)}
+
+@media (max-width: 400px) {
+  .vcard__titulo { font-size: 14px; }
+  .vcard__preco { font-size: 18px; }
+}

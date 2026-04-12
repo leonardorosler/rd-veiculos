@@ -109,3 +109,8 @@
 }
 
 .login__btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+@media (max-width: 480px) {
+  .login__card { padding: 28px 20px; border-radius: var(--r-lg); }
+  .login__titulo { font-size: 20px; }
+}

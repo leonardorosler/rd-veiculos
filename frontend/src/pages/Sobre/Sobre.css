@@ -210,3 +210,15 @@
   filter:grayscale(100%) invert(90%);
   opacity:0.8;
 }
+
+@media (max-width: 768px) {
+  .sobre__hero { padding: 120px 0 48px; }
+  .sobre__hero-titulo { letter-spacing: -0.5px; }
+  .sobre__dif { padding: 40px 0; }
+  .sobre__dif-grid { grid-template-columns: 1fr; }
+  .sobre__contato-grid { grid-template-columns: 1fr; }
+  .sobre__cta { padding: 24px 20px; }
+  .sobre__cta-inner { flex-direction: column; text-align: center; }
+  .sobre__cta-btn { width: 100%; justify-content: center; }
+  .sobre__mapa-frame { height: 260px; }
+}

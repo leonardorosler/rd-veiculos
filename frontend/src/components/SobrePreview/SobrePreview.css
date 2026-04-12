@@ -114,3 +114,8 @@
   color: var(--texto-sec);
   line-height: 1.6;
 }
+
+@media (max-width: 860px) {
+  .sobre-prev { padding: 48px 0; }
+  .sobre-prev__btn { width: 100%; text-align: center; }
+}

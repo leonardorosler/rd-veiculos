@@ -157,3 +157,15 @@
 }
 
 .filtro__aplicar:hover{background:var(--red-claro)}
+
+@media (max-width: 600px) {
+  .filtro__barra { flex-wrap: wrap; padding: 8px; gap: 8px; }
+  .filtro__busca-wrap { padding: 0 12px; min-width: 0; }
+  .filtro__btn-buscar { width: 100%; justify-content: center; margin-right: 0; }
+  .filtro__toggle { flex: 1; justify-content: center; }
+  .filtro__avancado-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 400px) {
+  .filtro__avancado-grid { grid-template-columns: 1fr; }
+}

@@ -39,6 +39,7 @@
   color:var(--texto-ter);
   text-transform:uppercase;letter-spacing:0.12em;
   line-height:1;
+  margin-top: 4px;
 }
 
 .navbar__links{display:flex;align-items:center;gap:8px}
@@ -84,4 +85,12 @@
   height: 44px;
   object-fit: contain;
   border-radius: 8px;
+}
+
+@media (max-width: 540px) {
+  .navbar__logo-sub { display: none; }
+  .navbar__links { gap: 4px; }
+  .navbar__link { padding: 8px 10px; font-size: 13px; }
+  .navbar__wpp span { display: none; }
+  .navbar__wpp { padding: 9px 12px; }
 }

@@ -205,3 +205,23 @@
   .dash__item { grid-template-columns: 72px 1fr; }
   .dash__item-acoes { grid-column: 1 / -1; }
 }
+
+@media (max-width: 768px) {
+  .dash__stats { gap: 10px; }
+  .dash__stat { padding: 16px 20px; min-width: unset; flex: 1; }
+  .dash__stat-num { font-size: 22px; }
+  .dash__topo-lista { flex-direction: column; align-items: flex-start; }
+  .dash__btn-novo { width: 100%; text-align: center; }
+}
+
+@media (max-width: 540px) {
+  .dash__item { grid-template-columns: 80px 1fr; gap: 12px; padding: 12px; }
+  .dash__item-img { width: 80px; height: 56px; }
+  .dash__item-acoes { 
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .dash__acao { text-align: center; font-size: 12px; padding: 8px 6px; }
+  .dash__header-inner { flex-wrap: wrap; gap: 10px; }
+}

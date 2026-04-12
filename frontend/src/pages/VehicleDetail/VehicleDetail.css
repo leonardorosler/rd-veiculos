@@ -197,3 +197,16 @@
   gap: 16px;
   color: var(--cor-texto-secundario);
 }
+
+@media (max-width: 768px) {
+  .detalhe__titulo { font-size: 22px; }
+  .detalhe__preco { font-size: 24px; }
+  .detalhe__specs { grid-template-columns: 1fr 1fr; }
+  .detalhe__thumbnails { gap: 6px; }
+  .detalhe__thumb { width: 60px; height: 44px; }
+  .detalhe__btn-whatsapp { font-size: 14px; padding: 14px; }
+}
+
+@media (max-width: 400px) {
+  .detalhe__specs { grid-template-columns: 1fr; }
+}

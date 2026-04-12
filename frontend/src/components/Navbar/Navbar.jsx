@@ -19,7 +19,7 @@ export default function Navbar() {
 
         <div className="navbar__links">
           <Link to="/" className={`navbar__link ${pathname === '/' ? 'ativo' : ''}`}>Catálogo</Link>
-          <Link to="/sobre" className={`navbar__link ${pathname === '/sobre' ? 'ativo' : ''}`}>Sobre Nós</Link>
+          <Link to="/sobre" className={`navbar__link ${pathname === '/sobre' ? 'ativo' : ''}`}>Sobre</Link>
           <a href="https://wa.me/5553999513430"
             target="_blank"
             rel="noopener noreferrer"
