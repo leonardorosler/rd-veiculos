@@ -6,13 +6,21 @@ const routes = require('./routes')
 
 const app = express()
 
-app.use(cors())
-app.use(express.json())
+const origensPermitidas = [
+  'http://localhost:5173',
+  process.env.FRONTEND_URL  // domínio do Vercel em produção
+].filter(Boolean)
 
+app.use(cors({
+  origin: origensPermitidas,
+  credentials: true
+}))
+
+app.use(express.json())
 app.use('/api', routes)
 
-app.get('/teste', (req, res) => {
-  res.json("Rota teste funcionando")
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok' })
 })
 
 const PORT = process.env.PORT || 3333
