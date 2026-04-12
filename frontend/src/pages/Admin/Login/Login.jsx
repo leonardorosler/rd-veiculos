@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../../../contexts/AuthContext'
 import './Login.css'
+import logo from '../../../assets/logo.png'
 
 export default function Login() {
   const { login } = useAuth()
@@ -28,7 +29,9 @@ export default function Login() {
     <div className="login">
       <div className="login__card">
         <div className="login__topo">
-          <span className="login__logo">◈</span>
+          <div className="login__logo">
+            <img src={logo} alt="RD Veículos" />
+          </div>
           <h1 className="login__titulo">Painel interno</h1>
           <p className="login__sub">Acesso restrito</p>
         </div>

@@ -23,10 +23,16 @@
 }
 
 .login__logo {
-  font-size: 36px;
-  color: var(--red);
-  display: block;
+  display: flex;
+  justify-content: center;
   margin-bottom: 16px;
+}
+
+.login__logo img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 45px;
 }
 
 .login__titulo {
@@ -91,6 +97,13 @@
 }
 
 .login__input::placeholder { color: var(--texto-ter); }
+
+.navbar__logo-img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 8px;
+}
 
 .login__btn {
   padding: 14px;
