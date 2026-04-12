@@ -88,9 +88,13 @@
 }
 
 @media (max-width: 540px) {
+  .navbar__inner { gap: 8px; }
+  .navbar__logo { gap: 8px; }
+  .navbar__logo-img { width: 36px; height: 36px; }
+  .navbar__logo-nome { font-size: 14px; }
   .navbar__logo-sub { display: none; }
   .navbar__links { gap: 4px; }
-  .navbar__link { padding: 8px 10px; font-size: 13px; }
-  .navbar__wpp span { display: none; }
-  .navbar__wpp { padding: 9px 12px; }
+  .navbar__link { padding: 6px 8px; font-size: 12px; }
+  .navbar__wpp { padding: 8px 10px; font-size: 12px; gap: 5px; margin-left: 0; }
+  .navbar__wpp svg { width: 13px; height: 13px; }
 }

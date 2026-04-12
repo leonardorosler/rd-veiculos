@@ -159,3 +159,16 @@
   .hero__num-val { font-size: 22px; }
   .hero__scroll-hint { display: none; }
 }
+
+@media (max-width: 768px) {
+  .hero__conteudo { padding: 40px 20px; }
+  .hero__nums { padding: 0 4px; }
+  .hero__num-val { font-size: 20px; }
+  .hero__num-txt { font-size: 10px; }
+  .hero__num-div { margin: 0 4px; }
+}
+
+@media (max-width: 400px) {
+  .hero__titulo { letter-spacing: -0.5px; }
+  .hero__nums { gap: 12px; }
+}
