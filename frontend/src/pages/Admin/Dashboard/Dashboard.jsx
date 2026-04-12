@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../../contexts/AuthContext'
 import api from '../../../services/api'
 import './Dashboard.css'
+import logo from '../../../assets/logo.png'
 
 export default function Dashboard() {
   const { logout } = useAuth()
@@ -53,7 +54,7 @@ export default function Dashboard() {
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               boxShadow: '0 0 12px var(--red-glow)'
             }}>
-              <img src="/src/assets/logo.png" alt="RD" style={{ width: '32px', height: '32px', objectFit: 'contain', borderRadius: '4px' }} />
+              <img src={logo} alt="RD" style={{ width: '32px', height: '32px', objectFit: 'contain', borderRadius: '4px' }} />
             </div>
             <span className="dash__admin-tag">Painel Admin</span>
           </div>
