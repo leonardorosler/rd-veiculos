@@ -65,8 +65,8 @@ export default function Sobre() {
                             <div className="sobre__info-icone">📞</div>
                             <div>
                                 <h4 className="sobre__info-titulo">Telefone / WhatsApp</h4>
-                                <p className="sobre__info-texto">(53) 9 9999-9999</p>
-                                <a href="https://wa.me/5553999999999"
+                                <p className="sobre__info-texto">(53) 9 9951-3430</p>
+                                <a href="https://wa.me/5553999513430"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="sobre__wpp-link">
@@ -95,7 +95,7 @@ export default function Sobre() {
                                 <h3 className="sobre__cta-titulo">Fale Agora</h3>
                                 <p className="sobre__cta-sub">Atendimento rápido e personalizado pelo WhatsApp</p>
                             </div>
-                            <a href="https://wa.me/5553999999999"
+                            <a href="https://wa.me/5553999513430"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="sobre__cta-btn">
@@ -116,7 +116,7 @@ export default function Sobre() {
                         <iframe
                             className="sobre__mapa-frame"
                             title="Localização RD Veículos"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.0!2d-52.63!3d-31.54!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMyJzI0LjAiUyA1MsKwMzcnNDguMCJX!5e0!3m2!1spt-BR!2sbr!4v1"
+                            src="https://maps.google.com/maps?q=Avenida+Jacarandá+233+Centro+Morro+Redondo+RS&output=embed&hl=pt-BR"
                             allowFullScreen
                             loading="lazy"
                         />

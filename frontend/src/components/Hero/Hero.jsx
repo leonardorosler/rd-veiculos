@@ -34,7 +34,7 @@ export default function Hero({ total }) {
             Ver catálogo
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </button>
-          <a href="https://wa.me/5553999999999" target="_blank" rel="noopener noreferrer" className="hero__btn-sec">
+          <a href="https://wa.me/5553999513430" target="_blank" rel="noopener noreferrer" className="hero__btn-sec">
             Falar com consultor
           </a>
         </div>
