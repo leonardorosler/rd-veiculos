@@ -2,7 +2,7 @@ import './Sobre.css'
 
 export default function Sobre() {
     return (
-        <div className="sobre">
+        <div id="sobre" className="sobre">
 
             {/* Hero interno */}
             <div className="sobre__hero">

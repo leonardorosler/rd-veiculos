@@ -51,14 +51,25 @@
   border-radius:var(--r-sm);
   transition:all var(--ease);
   position:relative;
+  color: rgb(180, 179, 179);
+}
+
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--red);
+  transition: width 0.2s var(--ease);
 }
 
 .navbar__link:hover,.navbar__link.ativo{color:var(--texto)}
-.navbar__link.ativo::after{
-  content:'';
-  position:absolute;bottom:-1px;left:0;right:0;
-  height:2px;background:var(--red);
-  border-radius:1px;
+
+.navbar__link:hover { color: var(--white); }
+.navbar__link:hover::after {
+  width: 100%;
 }
 
 .navbar__wpp{

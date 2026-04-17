@@ -27,7 +27,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Layout><Home /></Layout>} />
           <Route path="/veiculo/:id" element={<Layout><VehicleDetail /></Layout>} />
-          <Route path="/sobre" element={<Layout><Sobre /></Layout>} />
+          
 
           <Route path="/painel-interno" element={<Login />} />
           <Route path="/painel-interno/dashboard" element={<RotaProtegida><Dashboard /></RotaProtegida>} />

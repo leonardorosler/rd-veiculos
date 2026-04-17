@@ -18,8 +18,36 @@ export default function Navbar() {
         </Link>
 
         <div className="navbar__links">
-          <Link to="/" className={`navbar__link ${pathname === '/' ? 'ativo' : ''}`}>Catálogo</Link>
-          <Link to="/sobre" className={`navbar__link ${pathname === '/sobre' ? 'ativo' : ''}`}>Sobre</Link>
+
+          <Link
+            to="/"
+            className="navbar__link"
+            onClick={() => window.scrollTo(0, 0)}
+            >
+            Início
+          </Link>
+
+          <button
+            className="navbar__link"
+            onClick={() => {
+            const el = document.getElementById('catalogo')
+            if (el) {
+            el.scrollIntoView({ behavior: 'smooth' })
+           }
+          }}
+          >
+           Catálogo
+          </button>
+
+          <button
+            className="navbar__link"
+            onClick={() => {
+            document.getElementById('sobre')?.scrollIntoView({ behavior: 'smooth' })
+            }}
+            >
+            Sobre
+          </button>
+
           <a href="https://wa.me/5553999513430"
             target="_blank"
             rel="noopener noreferrer"
