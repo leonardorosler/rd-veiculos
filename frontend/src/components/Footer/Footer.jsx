@@ -34,9 +34,23 @@ export default function Footer() {
                     <div className="footer__col">
                         <h4 className="footer__col-titulo">Navegação</h4>
                         <nav className="footer__nav">
-                            <Link to="/" className="footer__link">Catálogo</Link>
-                            <Link to="/sobre" className="footer__link">Sobre Nós</Link>
-                            <Link to="/sobre#contato" className="footer__link">Contato</Link>
+                            <button className="footer__link" onClick={() => {
+                                document.getElementById('catalogo')?.scrollIntoView({ behavior: 'smooth' })
+                                fecharMenu()
+                                }}>
+                                Catálogo
+                                </button>
+
+
+                            <button className="footer__link" onClick={() => {
+                                document.getElementById('sobre')?.scrollIntoView({ behavior: 'smooth' })
+                                fecharMenu()
+                                }}>
+                                Sobre
+                            </button>
+                            
+                            <a href="https://wa.me/5553999513430" target="_blank" rel="noopener noreferrer" 
+                            className="footer__link">Contato</a>
                         </nav>
                     </div>
 

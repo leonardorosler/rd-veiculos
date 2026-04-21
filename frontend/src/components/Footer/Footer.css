@@ -87,6 +87,7 @@
 .footer__link{
   font-size:14px;color:var(--texto-sec);
   transition:color var(--ease);
+  margin-right: auto;
 }
 
 .footer__link:hover{color:var(--red)}
